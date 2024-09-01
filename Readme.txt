@@ -26,5 +26,3 @@
 ->npm init -y
 ->npm i express
 ->npm i mysql2
-
-=>In hackathon i did backend part and in frontend edit was not done and integrating both backend and frontend was not done.

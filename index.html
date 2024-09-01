@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+     <header>
+        <h1>Welcome to Benefits Management</h1>
+        <button type="button" id = "addbut" onclick="opendisplayform()">Click Here to Add Benefit</button>
+    </header>
+
+    <div id="formdiv" style = "display: none;">
+        <fieldset>
+            <h3>Benefits Form</h3><br>
+            <form id = "benefitForm">
+                <label>Name</label><br>
+                <input type = "text" id = "name" placeholder = "Enter benefit name"><br><br>
+                <label>Description</label><br>
+                <input type = "text" id = "description" placeholder = "Enter description"><br><br>
+                <label>Eligibility-Criteria</label><br>
+                <input type = "text" id = "eligibility_cri" placeholder = "Enter eligibility criteria"><br><br>
+                <label>Coverage-Amount</label><br>
+                <input type = "text" id = "coverage_amt" placeholder = "Enter coverage amount"><br><br>
+                <label>Start-Date</label><br>
+                <input type = "date" id = "start_date" placeholder = "Enter start date"><br><br>
+                <label>End-Date</label><br>
+                <input type ="date" id = "end_date" placeholder = "Enter end date"><br><br>
+                <button type ="submit" id = "submit" onclick = "closedisplayform()">Submit</button>
+                <button type ="reset" id = "reset">Reset</button>
+            </form>
+        </fieldset>
+    </div>
+    <br>
+
+        <fieldset style = "border-color: transparent;">
+            <h3>Benefits</h3><br>
+            <table border="1" id = "table" style = "background-color: lavender;">
+                <tr>
+                    <td class = ".r1">Name</td>
+                    <td class = ".r1">Description</td>
+                    <td class = ".r1">Eligibility-Criteria</td>
+                    <td class = ".r1">Coverage-Amount</td>
+                    <td class = ".r1">Start-Date</td>
+                    <td class = ".r1">End-Date</td>
+                    <td class = ".r1">Edit/Delete</td>
+                </tr>         
+            </table>
+        </fieldset>
+        
+        <script>
+            var x = document.getElementById('formdiv');
+            function opendisplayform(){
+                x.style.display = x.style.display === 'block'?'none':'block';
+            }
+            function closedisplayform(){
+                x.style.display = 'none';
+                submitform();
+                document.getElementById('benefitForm').reset();
+            }
+        </script>
+        <script src = "script1.js"></script>
+</body>
+</html>
+
+
